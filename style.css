@@ -1,0 +1,125 @@
+:root {
+  --border-color: #ddd;
+  --button-search-font: #3c4043;
+  --button-search-background: #f8f9fa;
+  --footer-background: #f2f2f2;
+  --footer-font: #70757a;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  /* footer support */
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  font-family: arial, sans-serif;
+  line-height: 1.6;
+  /* footer support */
+  margin-bottom: 100px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 55vh;
+  min-height: 300px;
+  margin-top: 50px;
+}
+
+li {
+  list-style-type: none;
+  cursor: pointer;
+}
+
+.navbar__right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar__right li {
+  margin: .5rem;
+}
+
+.search__box {
+  display : flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 580px;
+  height: 45px;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 30px;
+}
+
+.search__box:hover,
+.search__box:focus-within {
+  border-color: white;
+  box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+}
+
+.search-icon, .mic-icon {
+  display: block;
+}
+
+.search__box-input {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: 0;
+  padding: .5rem;
+}
+
+.search-buttons {
+  margin-top: 1rem;
+}
+
+.search-buttons__btn {
+  cursor: pointer;
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background-color: var(--button-search-background);
+}
+
+.search-buttons__btn:hover {
+  border-color: #dadce0;
+  box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
+}
+
+.footer {
+  display : flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2px;
+  border: 1px solid var(--border-color);
+  background: var(--footer-background);
+  color: var(--footer-font);
+}
+
+.footer li:hover {
+  text-decoration: underline;
+}
+
+.footer__left, .footer__right {
+  display : flex;
+}
+
+.footer__left li, .footer__right li {
+  padding: 10px 0 10px 30px;
+}
+
